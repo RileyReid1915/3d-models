@@ -1,6 +1,9 @@
 const express = require('express');
 const request = require('request');
+const cors = require('cors'); // Додаємо CORS
 const app = express();
+
+app.use(cors()); // Вмикаємо CORS для всіх запитів
 
 app.get('/proxy', (req, res) => {
   const url = 'https://drive.google.com/uc?export=download&id=1nAdSS7x1PMA4f7PKyRqWOoE_16Vga_xp';
